@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+env/
+
+# Flask
+instance/
+.webassets-cache
+
+# SQLite database
+*.db
+*.sqlite3
+
+# Uploaded files (optional)
+static/uploads/gallery/*
+static/uploads/activities/*
+
+# Keep folders tracked
+!static/uploads/gallery/.gitkeep
+!static/uploads/activities/.gitkeep
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Linux junk
+*~
+*.swp
+
+# macOS garbage
+.DS_Store
+
+# Logs
+*.log
