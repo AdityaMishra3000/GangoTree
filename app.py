@@ -37,6 +37,7 @@ os.makedirs(ACTIVITY_FOLDER, exist_ok=True)
 def get_db():
     db = getattr(g, "_db", None)
     if db is None:
+        init_db()
         db = g._db = sqlite3.connect(DB_PATH)
         db.row_factory = sqlite3.Row
     return db
