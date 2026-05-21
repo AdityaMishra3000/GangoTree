@@ -315,9 +315,11 @@ def delete_activity(id):
         flash("Activity deleted.", "success")
     return redirect("/admin/activities")
 
+# Initialize DB immediately when app loads
+init_db()
+
 # ── Run ────────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    init_db()
     print("\n" + "="*55)
     print("  🌿 Gangotree Social Organisation")
     print("="*55)
@@ -325,4 +327,5 @@ if __name__ == "__main__":
     print("  Admin    : http://127.0.0.1:5000/admin")
     print("  Login    : admin / admin123")
     print("="*55 + "\n")
-    app.run(debug=True, port=5000)
+
+    app.run(host="0.0.0.0", port=5000, debug=True)
